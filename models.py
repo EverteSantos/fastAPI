@@ -39,7 +39,7 @@ class Pedido(Base):
      #   ('FINALIZADO', 'FINALIZADO'),
      #   ('CANCELADO', 'CANCELADO')
     #)
-
+              
     id = Column('id', Integer, primary_key=True, autoincrement=True)
     status = Column('status', String) 
     usuario = Column('usuario', String, ForeignKey("usuarios.id")) 
