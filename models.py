@@ -41,9 +41,9 @@ class Pedido(Base):
     #)
 
     id = Column('id', Integer, primary_key=True, autoincrement=True)
-    status = Column('status', String) 
+    status = Column('status', String, default='PENDENTE') 
     usuario = Column('usuario', String, ForeignKey("usuarios.id")) 
-    preco = Column('preco', Float)
+    preco = Column('preco', Float, default=0)
     #itens = 
 
     def __init__(self, usuario, status="PENDENTE", preco=0):
