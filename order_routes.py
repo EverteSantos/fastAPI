@@ -7,9 +7,9 @@ from models import Pedido
 
 order_router = APIRouter(prefix='/order', tags=['order'])
 
-#@order_router.get("/")
-#async def pedidos():
-#    pass
+@order_router.get("/")
+async def pedidos():
+    pass
 
 @order_router.post("/pedido")
 async def criar_pedido(pedido_schema: PedidoSchema, session: Session = Depends(pegar_sessao)):
